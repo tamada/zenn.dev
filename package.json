@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "new": "npx zenn new:article",
+    "newbook": "npx zenn new:book",
+    "preview": "npx zenn preview"
+  },
+  "dependencies": {
+    "zenn-cli": "^0.2.3"
+  }
+}
