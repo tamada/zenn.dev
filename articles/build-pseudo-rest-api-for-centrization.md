@@ -3,7 +3,7 @@ title: "情報の一元化のために、擬似REST APIを構築した"
 emoji: "🌳"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["REST API", "Pseudo REST API", "GitHub", "GitHub Actions", "GitHub Pages", "GitHub Apps"]
-published: false
+published: true
 ---
 
 ## 背景
