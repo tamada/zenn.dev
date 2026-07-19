@@ -71,7 +71,8 @@ https://tamada.github.io/api/
 
 ツールを作成したり更新すると、`tamada/api` の GitHub Actions に更新のリクエストを飛ばす。
 `tamada/api` はツールの情報を取得し、REST API のJSONファイルを更新する。
-続けて、`tamada/api` は [`tamada/homebrew-tap`](https://github.com/tamada/homebrew-tap) や　`tamada/tamada.github.io` への更新のリクエストを飛ばす。
+続けて、`tamada/api` は [`tamada/homebrew-tap`](https://github.com/tamada/homebrew-tap) や
+`tamada/tamada.github.io` への更新のリクエストを飛ばす。
 
 `tamada/tamada.github.io` は、必要な情報を上記エンドポイントから取得して、ページを更新する。
 一部は、[`goreleaser`](https://goreleaser.com) なんかでも実現できることだと思う。
@@ -80,9 +81,9 @@ https://tamada.github.io/api/
 
 なお、GitHub では、あるリポジトリAから別のリポジトリBにリクエストを飛ばすには、PAT (Personal Access Token) の発行が必要で、その PAT をリポジトリAに登録する必要がある。
 ただし、PAT は 30 日? 60日? 程度で Expire させることが推奨されている。
-つまり、一定期間後とに PAT を更新し、再登録して回る作業がついてまわる。
+つまり、一定期間ごとに PAT を更新し、再登録して回る作業がついてまわる。
 
-そんなことはやってられん！　と AI に相談すると、GitHub App というものを用意して、アカウントにインストールすると良いよと教えてくれた。
+そんなことはやってられん！ と AI に相談すると、GitHub App というものを作成して、アカウントにインストールすると良いよと教えてくれた。
 GitHub App を使うと、その時に極短期間だけ有効な PAT を発行してくれて、利用できるとのこと。
 この場合も、リポジトリAに GitHub App のクライアントIDとプライベートキーを登録する必要がある。
 しかし、このクライアントIDとプライベートキーは再発行の必要がないので、最初の１回だけの登録で済む。
